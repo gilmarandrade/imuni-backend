@@ -23,7 +23,7 @@ app.server.config.socket.init(server);
 
 
 server.listen(process.env.PORT, ()=>{
-  console.log('[' + env.DOMAIN + '] server running');
+  console.log('[' + env.DOMAIN + ':' + process.env.PORT + '] server running');
   console.log(env)
   if(env.DOMAIN != 'localhost') {
     app.server.config.mail.send(
