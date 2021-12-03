@@ -9,8 +9,8 @@ const getClientPromise = new Promise(async function (resolve) {
     const authClient = await auth.getClient();
     return resolve(authClient);
   } catch (e) {
-    console.log(e);
-    process.exit(1);
+    console.error(e);
+    // process.exit(1);
   }
 });
 
