@@ -38,7 +38,7 @@ server.listen(process.env.PORT, ()=>{
 
   if(process.env.DOMAIN != 'localhost') {
     app.server.config.mail.send(
-      `<h1>[${process.env.DOMAIN}:${process.env.PORT}]Sistema reiniciado</h1>
+      `<h1>[${process.env.DOMAIN}:${process.env.PORT}] Sistema reiniciado</h1>
       Se você não solicitou esta ação, verifique se ocorreu um erro no Node.js que possa ter reiniciado o sistema`,
       `Sistema reiniciado`,
       process.env.DEVELOPER_MAIL);
