@@ -2,7 +2,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const corsOptions = {
-    origin: ['*:*', 'http://localhost:8080', 'https://6045759a814e640007bc4ffb--elegant-kirch-545ebc.netlify.app:8080'],
+    origin: ['*:*', 'http://localhost:8080', 'https://imuni.herokuapp.com/'],
     optionsSuccessStatus: 200
 }
 
