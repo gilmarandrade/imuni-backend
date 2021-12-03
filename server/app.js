@@ -24,14 +24,24 @@ app.server.config.socket.init(server);
 
 server.listen(process.env.PORT, ()=>{
   console.log('[' + process.env.DOMAIN + ':' + process.env.PORT + '] server running');
+  console.log('DOMAIN:' + process.env.DOMAIN);
+  console.log('PORT:' + process.env.PORT);
+  console.log('AUTH_SECRET:' + process.env.AUTH_SECRET);
+  console.log('MONGO_URIS:' + process.env.MONGO_URIS);
+  console.log('MONGO_DB_NAME:' + process.env.MONGO_DB_NAME);
+  console.log('CLIENT_URL:' + process.env.CLIENT_URL);
+  console.log('SMTP_HOST:' + process.env.SMTP_HOST);
+  console.log('SMTP_USER:' + process.env.SMTP_USER);
+  console.log('SMTP_PASSWORD:' + process.env.SMTP_PASSWORD);
+  console.log('MODE:' + process.env.MODE);
+  console.log('DEVELOPER_MAIL:' + process.env.DEVELOPER_MAIL);
+
   if(process.env.DOMAIN != 'localhost') {
     app.server.config.mail.send(
-      `<h1>Sistema reiniciado</h1>
+      `<h1>[${process.env.DOMAIN}:${process.env.PORT}]Sistema reiniciado</h1>
       Se você não solicitou esta ação, verifique se ocorreu um erro no Node.js que possa ter reiniciado o sistema`,
       `Sistema reiniciado`,
       process.env.DEVELOPER_MAIL);
-  } else {
-    console.log(env)
   }
 });
 
